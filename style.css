@@ -1,83 +1,108 @@
-:root {
-  --bg: #f4f6fb;
-  --text: #333;
-  --card: #fff;
-  --primary: #2563eb;
-}
-
-.dark {
-  --bg: #0f172a;
-  --text: #e5e7eb;
-  --card: #1e293b;
-}
-
 * {
-  margin: 0; padding: 0; box-sizing: border-box;
-  font-family: Arial, sans-serif;
-  scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-  background: var(--bg);
-  color: var(--text);
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+}
+
+header {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 40px;
 }
 
 nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: var(--card);
-  padding: 15px 30px;
-  position: sticky;
-  top: 0;
+    background: #444;
+    text-align: center;
+    padding: 10px;
 }
 
-nav ul { list-style: none; display: flex; gap: 20px; }
-nav a { text-decoration: none; color: var(--text); }
-
-.hero {
-  text-align: center;
-  padding: 60px 20px;
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
 }
-.hero img {
-  width: 140px; height: 140px;
-  border-radius: 50%;
+
+nav button {
+    padding: 6px 12px;
+    cursor: pointer;
 }
 
 section {
-  max-width: 900px;
-  margin: 30px auto;
-  background: var(--card);
-  padding: 30px;
-  border-radius: 10px;
+    padding: 40px;
+    background: white;
+    margin: 20px;
+    border-radius: 10px;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
-  gap: 15px;
+.profile-img {
+    width: 150px;
+    border-radius: 50%;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+}
+
+.skills-list li {
+    background: #007BFF;
+    color: white;
+    padding: 8px 15px;
+    margin: 5px;
+    border-radius: 20px;
 }
 
 .project-card {
-  border: 1px solid #ccc;
-  padding: 15px;
-  margin-top: 15px;
-  border-radius: 8px;
-  transition: transform 0.3s;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 25px;
 }
-.project-card:hover { transform: translateY(-5px); }
+
+.project-card img {
+    width: 100%;
+    border-radius: 10px;
+}
 
 .btn {
-  color: blue;
-  padding: 5px 5px;
-  border-radius: 5px;
-  text-decoration: none;
-  border: none;
-  cursor: pointer;
+    padding: 10px 20px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
 }
 
-input, textarea {
-  width: 100%;
-  margin-bottom: 10px;
-  padding: 10px;
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* 🌙 DARK MODE */
+.dark {
+    background: #121212;
+    color: white;
+}
+
+.dark section {
+    background: #1e1e1e;
+}
+
+@media (max-width: 768px) {
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
 }
